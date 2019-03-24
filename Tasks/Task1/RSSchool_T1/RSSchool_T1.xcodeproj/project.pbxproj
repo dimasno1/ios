@@ -103,6 +103,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52B91A7F224831E0009206E5 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				BDBA865122419F4E00AFC095 /* Assets.xcassets */,
+				BDBA865322419F4E00AFC095 /* LaunchScreen.storyboard */,
+				BDBA865622419F4E00AFC095 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		BDBA864222419F4D00AFC095 = {
 			isa = PBXGroup;
 			children = (
@@ -127,9 +137,7 @@
 				BDBA866C2241A0E700AFC095 /* Exercises */,
 				BDBA864E22419F4D00AFC095 /* AppDelegate.h */,
 				BDBA864F22419F4D00AFC095 /* AppDelegate.m */,
-				BDBA865122419F4E00AFC095 /* Assets.xcassets */,
-				BDBA865322419F4E00AFC095 /* LaunchScreen.storyboard */,
-				BDBA865622419F4E00AFC095 /* Info.plist */,
+				52B91A7F224831E0009206E5 /* SupportingFiles */,
 				BDBA865722419F4E00AFC095 /* main.m */,
 			);
 			path = RSSchool_T1;
