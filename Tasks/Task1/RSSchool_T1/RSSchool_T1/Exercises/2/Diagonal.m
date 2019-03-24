@@ -4,7 +4,23 @@
 
 // Complete the diagonalDifference function below.
 - (NSNumber *) diagonalDifference:(NSArray *)array {
-    return 0;
+    [array retain];
+    int primarySumm = 0;
+    int secondarySumm = 0;
+    
+    for(int i = 0; i < array.count; i++) {
+        NSArray *numbersArray = [array[i] componentsSeparatedByString:@" "];;
+        NSNumber *primary = numbersArray[i];
+        NSNumber *secondary = numbersArray[(array.count - 1) - i];
+        
+        if (primary, secondary) {
+            primarySumm += [primary integerValue];
+            secondarySumm += [secondary integerValue];
+        }
+    }
+
+    [array release];
+    return [NSNumber numberWithInt: abs(primarySumm - secondarySumm)];
 }
 
 @end
