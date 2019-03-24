@@ -117,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				BDBA864D22419F4D00AFC095 /* RSSchool_T1 */,
+				52B91A7F224831E0009206E5 /* SupportingFiles */,
 				BDBA866022419F4E00AFC095 /* RSSchool_T1Tests */,
 				BDBA864C22419F4D00AFC095 /* Products */,
 			);
@@ -137,7 +138,6 @@
 				BDBA866C2241A0E700AFC095 /* Exercises */,
 				BDBA864E22419F4D00AFC095 /* AppDelegate.h */,
 				BDBA864F22419F4D00AFC095 /* AppDelegate.m */,
-				52B91A7F224831E0009206E5 /* SupportingFiles */,
 				BDBA865722419F4E00AFC095 /* main.m */,
 			);
 			path = RSSchool_T1;
@@ -499,7 +499,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RSSchool_T1/Info.plist;
+				DEVELOPMENT_TEAM = P99EM85EA2;
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -516,7 +517,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_ARC = NO;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = RSSchool_T1/Info.plist;
+				DEVELOPMENT_TEAM = P99EM85EA2;
+				INFOPLIST_FILE = "$(SRCROOT)/SupportingFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

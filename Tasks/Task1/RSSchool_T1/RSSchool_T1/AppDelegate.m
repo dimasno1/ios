@@ -8,10 +8,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    UIViewController *rootController = [[UIViewController new] autorelease];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    [self.window setRootViewController: [UIViewController new]];
     self.window.backgroundColor = [UIColor whiteColor];
+    [self.window setRootViewController: rootController];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
@@ -20,4 +23,9 @@
 - (void)applicationWillEnterForeground:(UIApplication *)application {}
 - (void)applicationDidBecomeActive:(UIApplication *)application {}
 - (void)applicationWillTerminate:(UIApplication *)application {}
+
+- (void)dealloc {
+    [_window release];
+    [super dealloc];
+}
 @end
