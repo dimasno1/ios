@@ -9,10 +9,7 @@
     int result = 0;
     for(int i = 0; i < array.count; i++) {
         NSNumber *value = array[i];
-        
-        if (value) {
-            result += [value integerValue];
-        }
+        result += [value integerValue];
     }
     
     [array release];

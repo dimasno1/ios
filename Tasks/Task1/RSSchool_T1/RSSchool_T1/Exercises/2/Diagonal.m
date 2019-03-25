@@ -13,12 +13,10 @@
         NSNumber *primary = numbersArray[i];
         NSNumber *secondary = numbersArray[(array.count - 1) - i];
         
-        if (primary, secondary) {
-            primarySumm += [primary integerValue];
-            secondarySumm += [secondary integerValue];
-        }
+        primarySumm += [primary integerValue];
+        secondarySumm += [secondary integerValue];
     }
-
+    
     [array release];
     return [NSNumber numberWithInt: abs(primarySumm - secondarySumm)];
 }

@@ -13,7 +13,6 @@
 }
 @end
 
-
 // Pangrams
 
 @implementation Pangrams
@@ -23,7 +22,7 @@
     
     NSString *noWhitespacesLowercasedString = [[string stringByReplacingOccurrencesOfString:@" " withString:@""] lowercaseString];
     NSCharacterSet *givenSet = [NSCharacterSet characterSetWithCharactersInString:noWhitespacesLowercasedString];
-    
+
     [string release];
     return [givenSet isEqual:NSCharacterSet.latinLettersLowercased];
 }

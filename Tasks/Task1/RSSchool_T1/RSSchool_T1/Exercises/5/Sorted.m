@@ -67,6 +67,11 @@ typedef struct {
 @end
 
 @implementation ResultObject
+
+- (void)dealloc {
+    [_detail release];
+    [super dealloc];
+}
 @end
 
 @implementation Sorted
@@ -77,21 +82,19 @@ typedef struct {
 
     NSArray *properlySortedArray = [[NSArray numberedFromString:string] sortedAscending:true];
     NSArray *givenArray = [NSArray numberedFromString:string];
-
+    [value setStatus:YES];
     [string release];
-    [value setStatus:NO];
     SwapIndexes indexes = [givenArray mismatchedValuesIndexesComparableWith:properlySortedArray];
 
     if ([givenArray isEqualToArray:properlySortedArray]) {
-        [value setStatus:YES];
     } else if ([givenArray canBeSortedBySwappingObjectsAtIndexes:indexes equallyTo:properlySortedArray]) {
-        [value setStatus:YES];
         NSString *output = [NSString stringWithFormat:@"swap %ld %ld", indexes.first + 1, indexes.second + 1];
         [value setDetail:output];
     } else if ([givenArray canBeSortedByReverseObjectsInRangeFromIndexes:indexes equallyTo:properlySortedArray]) {
-        [value setStatus:YES];
         NSString *output = [NSString stringWithFormat:@"reverse %ld %ld", indexes.first + 1, indexes.second + 1];
         [value setDetail:output];
+    } else {
+        [value setStatus:NO];
     }
 
     return value;
