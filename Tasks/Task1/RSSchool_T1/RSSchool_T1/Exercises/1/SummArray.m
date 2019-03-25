@@ -16,7 +16,7 @@
     }
     
     [array release];
-    return [NSNumber numberWithInt:result];
+    return @(result);
 }
 
 @end
