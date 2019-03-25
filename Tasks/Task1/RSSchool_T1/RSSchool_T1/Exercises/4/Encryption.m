@@ -6,8 +6,8 @@
 - (NSString *)encryption:(NSString *)string {
     [string retain];
     
-    NSString *noWhitspacesMessage = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
-    NSUInteger lenght = [noWhitspacesMessage length];
+    NSString *noWhitespacesMessage = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
+    NSUInteger lenght = [noWhitespacesMessage length];
     NSNumber *lenghtSquareRoot = @(sqrt(lenght));
     
     int rows = floorf(lenghtSquareRoot.doubleValue);
@@ -22,7 +22,7 @@
     for (int i = 0; i < rows; i++) {
         BOOL lastRow = i == rows - 1;
         NSRange range =  NSMakeRange(i * columns, lastRow ? lastRowLettersCount : columns);
-        NSString *cuttedMessage = [noWhitspacesMessage substringWithRange:range];
+        NSString *cuttedMessage = [noWhitespacesMessage substringWithRange:range];
         [array addObject:cuttedMessage];
     }
     
@@ -43,7 +43,7 @@
         NSString *cuttedString = [array objectAtIndex:rowIndex];
         for(int letterIndex = 0; letterIndex < [cuttedString length]; letterIndex ++) {
             NSString *character = [NSString stringWithFormat:@"%C", [cuttedString characterAtIndex:letterIndex]];
-            NSMutableString *resultString = [[encrypted objectAtIndex:letterIndex] mutableCopy];
+            NSMutableString *resultString = [[[encrypted objectAtIndex:letterIndex] mutableCopy] autorelease];
             
             [resultString appendString:character];
             [encrypted replaceObjectAtIndex:letterIndex withObject:resultString];

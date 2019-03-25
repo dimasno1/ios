@@ -4,17 +4,13 @@
 // Pangrams+Extended
 
 @interface NSCharacterSet(Extended)
-
 + (NSCharacterSet *) latinLettersLowercased;
-
 @end
 
 @implementation NSCharacterSet(Extended)
-
 + (NSCharacterSet *)latinLettersLowercased {
     return [NSCharacterSet characterSetWithCharactersInString: @"abcdefghijklmnopqrstuvwxyz"];
 }
-
 @end
 
 
