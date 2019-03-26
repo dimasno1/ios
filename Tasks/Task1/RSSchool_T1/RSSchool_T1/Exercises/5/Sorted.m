@@ -87,6 +87,7 @@ typedef struct {
     SwapIndexes indexes = [givenArray mismatchedValuesIndexesComparableWith:properlySortedArray];
 
     if ([givenArray isEqualToArray:properlySortedArray]) {
+        return value;
     } else if ([givenArray canBeSortedBySwappingObjectsAtIndexes:indexes equallyTo:properlySortedArray]) {
         NSString *output = [NSString stringWithFormat:@"swap %ld %ld", indexes.first + 1, indexes.second + 1];
         [value setDetail:output];
