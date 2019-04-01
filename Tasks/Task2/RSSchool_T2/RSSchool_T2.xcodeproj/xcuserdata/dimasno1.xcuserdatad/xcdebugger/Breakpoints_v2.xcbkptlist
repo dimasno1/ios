@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "RSSchool_T2Tests/RomanTranslatorTests.m"
+            timestampString = "575837687.307901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "-test2"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslatorTests test2]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimasno1/EPAM/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2Tests/RomanTranslatorTests.m"
+                  timestampString = "575837688.180384"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "106">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslatorTests test2]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimasno1/EPAM/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2Tests/RomanTranslatorTests.m"
+                  timestampString = "575837688.183555"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "132">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslatorTests test2]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimasno1/EPAM/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2Tests/RomanTranslatorTests.m"
+                  timestampString = "575837688.188572"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "619">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslatorTests test2]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimasno1/EPAM/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2Tests/RomanTranslatorTests.m"
+                  timestampString = "575837688.192353"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "646">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[RomanTranslatorTests test2]"
+                  moduleName = "RSSchool_T2Tests"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/dimasno1/EPAM/ios/Tasks/Task2/RSSchool_T2/RSSchool_T2Tests/RomanTranslatorTests.m"
+                  timestampString = "575837688.201491"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "713">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

@@ -1,19 +1,5 @@
 #import "KidnapperNote.h"
-
-@interface NSArray(Extended)
-@end
-
-@implementation NSArray(Extended)
--(BOOL)reduceTrueWithInitial:(BOOL)initialResult usingBlock:(BOOL(^)(BOOL result, id element))block {
-    __block BOOL initial = initialResult;
-    
-    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        initial = block(initial, obj);
-    }];
-
-    return initial;
-}
-@end
+#import "Collections+Extended.h"
 
 @implementation KidnapperNote
 
@@ -32,7 +18,7 @@
         return newResult;
     };
 
-    return [words reduceTrueWithInitial:YES usingBlock: reduceBlock];
+    return [words reduceBoolWithInitial:YES usingBlock: reduceBlock];
 }
 
 @end

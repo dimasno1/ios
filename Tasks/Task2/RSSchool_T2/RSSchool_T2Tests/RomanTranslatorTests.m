@@ -16,7 +16,8 @@
 }
 
 - (void)test2 {
-  XCTAssertEqual(@"IV", [self.translator romanFromArabic:@"4"]);
+    NSString *result = [self.translator romanFromArabic:@"4"];
+  XCTAssertEqual(@"IV", result);
 }
 
 - (void)test3 {
