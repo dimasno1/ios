@@ -10,6 +10,16 @@
 
 @implementation NSArray(Extended)
 
+-(id)reduceWithInitial:(id)initialResult usingBlock:(id(^)(id result, id element))block {
+    __block id initial = initialResult;
+    
+    [self enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        initial = block(initial, obj);
+    }];
+    
+    return initial;
+}
+
 -(BOOL)reduceBoolWithInitial:(BOOL)initialResult usingBlock:(BOOL(^)(BOOL result, id element))block {
     __block BOOL initial = initialResult;
     

@@ -11,6 +11,7 @@
 
 @interface NSArray(Extended)
 
+-(id)reduceWithInitial:(id)initialResult usingBlock:(id(^)(id result, id element))block;
 -(BOOL)reduceBoolWithInitial:(BOOL)initialResult usingBlock:(BOOL(^)(BOOL result, id element))block;
 -(NSArray*)mapUsingBlock:(id(^)(id element1))block;
 
