@@ -1,5 +1,5 @@
 //
-//  NSArray+Printable.h
+//  NSArray+StringRepresentable.h"
 //  RSSchool_T3
 //
 //  Created by Dimasno1 on 4/10/19.

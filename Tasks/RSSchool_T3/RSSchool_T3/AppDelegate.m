@@ -13,6 +13,7 @@
   [self.window setRootViewController:[DateMachine new]];
   self.window.backgroundColor = [UIColor whiteColor];
   [self.window makeKeyAndVisible];
+
   return YES;
 }
 

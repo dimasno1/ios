@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "NSArray+StringRepresentable.h"
 /*
  You need to extend NSArray functionality and add a method which will print it's contents.
  It should also print square brackets for the beginning and the end of the array.
