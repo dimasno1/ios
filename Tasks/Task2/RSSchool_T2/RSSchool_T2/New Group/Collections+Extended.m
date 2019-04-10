@@ -36,7 +36,7 @@
         [result addObject:block(obj)];
     }];
     
-    return [result copy];
+    return result;
 }
 
 @end

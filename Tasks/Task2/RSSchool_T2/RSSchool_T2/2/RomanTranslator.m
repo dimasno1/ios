@@ -43,13 +43,13 @@
 
 - (NSString *)romanFromArabic:(NSString *)arabicString {
     NSNumber *number = @([arabicString intValue]);
-    [_bases removeAllObjects];
     [self collectBasesFromNumber:number];
     
     NSString *resultString = [[_bases mapUsingBlock:^id(id element1) {
         return [self romanReperesentationOfArabic:element1];
     }] componentsJoinedByString:@""];
     
+    [_bases removeAllObjects];
     return resultString;
 }
 
@@ -63,7 +63,7 @@
     } else {
         NSNumber* key = [self nearestDividerFor:arabic];
         int count = arabic.intValue / key.intValue;
-        NSMutableArray *array = [NSMutableArray new];
+        NSMutableArray *array = [[NSMutableArray new] autorelease];
         
         for (int i = 0; i < count; i++) {
             [array addObject:_arabicConversionKeys[key]];

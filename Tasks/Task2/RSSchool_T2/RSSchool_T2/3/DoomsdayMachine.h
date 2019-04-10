@@ -1,4 +1,5 @@
 #import <Foundation/Foundation.h>
+#import "DDAssimilationInfo.h"
 /*
  You are a Borg and you are going to assimilate the humans.
  The date of assimilation is set to 14 August 2208 03:13:37 (in obsolete human calendar)
