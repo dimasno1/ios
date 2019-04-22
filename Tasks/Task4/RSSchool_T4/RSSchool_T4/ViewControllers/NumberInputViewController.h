@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FlaggedTextField.h"
+#import "PhoneNumbersService.h"
 
-@interface NumberInputViewController : UIViewController
+@interface NumberInputViewController : UIViewController <UITextFieldDelegate>
 
 @end
 
