@@ -11,6 +11,8 @@
 
 @interface PhoneNumbersService : NSObject
 
+- (NSInteger)phoneLenghtForPhone:(NSString *)phone;
 - (NSString *)countryCodeForPhone:(NSString *)phone;
+- (NSString *)formatPhoneNumber:(NSString *)phoneNumber;
 
 @end

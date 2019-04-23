@@ -46,12 +46,6 @@
     return YES;
 }
 
-- (void)textFieldDidBeginEditing:(UITextField *)textField {
-    if ([textField.text isEqualToString:@""]) {
-        textField.text = @"+";
-    }
-}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField {
     [textField resignFirstResponder];
     return [textField isFirstResponder];
@@ -70,6 +64,9 @@
     } else {
         [_flaggedTextField hideFlagImage];
     }
+    
+    [_numberService formatPhoneNumber:number];
+    
     
     return YES;
 }
