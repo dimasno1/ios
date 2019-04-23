@@ -52,21 +52,22 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    NSString *number = [[textField.text stringByReplacingOccurrencesOfString:@"+" withString:@""]stringByAppendingString:string];
-    NSString *code = [_numberService countryCodeForPhone:number];
+    BOOL isDeleting = [string isEqualToString:@""];
+    
+    NSString *number = [textField.text stringByReplacingOccurrencesOfString:@"+" withString:@""];
+    NSString *result = isDeleting ? [number stringByDeletingLastPathComponent] : [number stringByAppendingString:string];
+    NSString *code = [_numberService countryCodeForPhone:result];
     
     if (code != nil) {
-        NSMutableString *name = [NSMutableString stringWithString:code];
-        [name insertString:@"flag_" atIndex:0];
-        
+        NSString *name = [@"flag_" stringByAppendingString:code];
         UIImage *flagImage = [UIImage imageNamed:name];
+        
         [_flaggedTextField showFlagImage:flagImage];
     } else {
         [_flaggedTextField hideFlagImage];
     }
     
     [_numberService formatPhoneNumber:number];
-    
     
     return YES;
 }
