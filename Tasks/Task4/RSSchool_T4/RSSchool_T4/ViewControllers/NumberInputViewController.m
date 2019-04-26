@@ -29,7 +29,7 @@
 }
 
 - (void)setup {
-    _flaggedTextField = [[FlaggedTextField new]autorelease];
+    _flaggedTextField = [FlaggedTextField new];
     _numberService = [PhoneNumbersService new];
     _flaggedTextField.numberField.delegate = self;
     
@@ -40,6 +40,23 @@
 - (void)makeConstraints {
     _flaggedTextField.frame = CGRectMake(0, 0, 300, 50);
     _flaggedTextField.center = self.view.center;
+}
+
+- (void)updateImageIfNeededForCode:(NSString *)code {
+    if (code) {
+        NSString *name = [@"flag_" stringByAppendingString:code];
+        UIImage *flagImage = [UIImage imageNamed:name];
+
+        [_flaggedTextField setFlagImage:flagImage];
+    } else {
+        [_flaggedTextField setFlagImage: nil];
+    }
+}
+
+- (void)dealloc {
+    [_numberService release];
+    [_flaggedTextField release];
+    [super dealloc];
 }
 
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField {
@@ -53,23 +70,28 @@
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
     BOOL isDeleting = [string isEqualToString:@""];
-    
-    NSString *number = [textField.text stringByReplacingOccurrencesOfString:@"+" withString:@""];
-    NSString *result = isDeleting ? [number stringByDeletingLastPathComponent] : [number stringByAppendingString:string];
-    NSString *code = [_numberService countryCodeForPhone:result];
-    
-    if (code != nil) {
-        NSString *name = [@"flag_" stringByAppendingString:code];
-        UIImage *flagImage = [UIImage imageNamed:name];
-        
-        [_flaggedTextField showFlagImage:flagImage];
-    } else {
-        [_flaggedTextField hideFlagImage];
+    NSCharacterSet *set = [NSCharacterSet.decimalDigitCharacterSet invertedSet];
+    NSString *text = [textField.text stringByAppendingString:string];
+
+    if (text.length == 1 && isDeleting) {
+        return  YES;
     }
-    
-    [_numberService formatPhoneNumber:number];
-    
-    return YES;
+
+    NSString *digitsString = [[text componentsSeparatedByCharactersInSet:set] componentsJoinedByString:@""];
+    NSString *code = [_numberService codeIn:digitsString];
+
+    if (digitsString.length > [_numberService phoneLenghtForPhone:digitsString] + code.length) {
+        return isDeleting;
+    }
+
+    NSString *result = isDeleting ? [digitsString substringToIndex:MAX(digitsString.length - 1,0)] : digitsString;
+    NSString *countryCode = [_numberService countryCodeInPhoneNumber:result];
+    [self updateImageIfNeededForCode: countryCode];
+
+    NSString *formatted = [_numberService formatPhoneNumber:result];
+    textField.text = formatted;
+
+    return NO;
 }
 
 @end

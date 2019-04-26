@@ -13,8 +13,7 @@
 
 @property(retain, nonatomic)UITextField *numberField;
 
-- (void)showFlagImage:(UIImage *)image;
-- (void)hideFlagImage;
+- (void)setFlagImage:(UIImage *)image;
 
 @end
 

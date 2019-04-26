@@ -7,12 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import "PhoneComponents.h"
+#import "CodeParams.h"
 
 @interface PhoneNumbersService : NSObject
 
+- (NSString *)codeIn:(NSString *)number;
 - (NSInteger)phoneLenghtForPhone:(NSString *)phone;
-- (NSString *)countryCodeForPhone:(NSString *)phone;
+- (NSString *)countryCodeInPhoneNumber:(NSString *)phone;
 - (NSString *)formatPhoneNumber:(NSString *)phoneNumber;
 
 @end

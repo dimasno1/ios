@@ -10,6 +10,7 @@
 		5213332B226E4F6A0076CC96 /* NumberInputViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213332A226E4F6A0076CC96 /* NumberInputViewController.m */; };
 		5213332E226E577B0076CC96 /* FlaggedTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 5213332D226E577B0076CC96 /* FlaggedTextField.m */; };
 		52133337226E5F390076CC96 /* PhoneNumbersService.m in Sources */ = {isa = PBXBuildFile; fileRef = 52133336226E5F390076CC96 /* PhoneNumbersService.m */; };
+		8486D56522736CCD00C327C2 /* CodeParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 8486D56422736CCD00C327C2 /* CodeParams.m */; };
 		BD47B5532268ED9F0060BDF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD47B5522268ED9F0060BDF3 /* AppDelegate.m */; };
 		BD47B5552268EDA10060BDF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD47B5542268EDA10060BDF3 /* Assets.xcassets */; };
 		BD47B5582268EDA10060BDF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD47B5562268EDA10060BDF3 /* LaunchScreen.storyboard */; };
@@ -24,6 +25,9 @@
 		5213332D226E577B0076CC96 /* FlaggedTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlaggedTextField.m; sourceTree = "<group>"; };
 		52133335226E5F390076CC96 /* PhoneNumbersService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PhoneNumbersService.h; sourceTree = "<group>"; };
 		52133336226E5F390076CC96 /* PhoneNumbersService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PhoneNumbersService.m; sourceTree = "<group>"; };
+		8486D56322736CCD00C327C2 /* CodeParams.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CodeParams.h; sourceTree = "<group>"; };
+		8486D56422736CCD00C327C2 /* CodeParams.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CodeParams.m; sourceTree = "<group>"; };
+		84C0934A22735096001F853B /* PhoneComponents.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhoneComponents.h; sourceTree = "<group>"; };
 		BD47B54E2268ED9F0060BDF3 /* RSSchool_T4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RSSchool_T4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD47B5512268ED9F0060BDF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BD47B5522268ED9F0060BDF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -77,10 +81,21 @@
 		52133334226E5F1D0076CC96 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				52133335226E5F390076CC96 /* PhoneNumbersService.h */,
-				52133336226E5F390076CC96 /* PhoneNumbersService.m */,
+				8436259C22736D68007B7F05 /* PhoneService */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		8436259C22736D68007B7F05 /* PhoneService */ = {
+			isa = PBXGroup;
+			children = (
+				52133335226E5F390076CC96 /* PhoneNumbersService.h */,
+				52133336226E5F390076CC96 /* PhoneNumbersService.m */,
+				84C0934A22735096001F853B /* PhoneComponents.h */,
+				8486D56322736CCD00C327C2 /* CodeParams.h */,
+				8486D56422736CCD00C327C2 /* CodeParams.m */,
+			);
+			path = PhoneService;
 			sourceTree = "<group>";
 		};
 		BD47B5452268ED9F0060BDF3 = {
@@ -183,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8486D56522736CCD00C327C2 /* CodeParams.m in Sources */,
 				5213332E226E577B0076CC96 /* FlaggedTextField.m in Sources */,
 				52133337226E5F390076CC96 /* PhoneNumbersService.m in Sources */,
 				5213332B226E4F6A0076CC96 /* NumberInputViewController.m in Sources */,
@@ -329,7 +345,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "RSSchool.RSSchool-T4";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dimasno1.RSSchool.RSSchool-T4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -347,7 +363,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "RSSchool.RSSchool-T4";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dimasno1.RSSchool.RSSchool-T4";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

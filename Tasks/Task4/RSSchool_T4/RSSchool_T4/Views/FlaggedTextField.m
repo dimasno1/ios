@@ -31,8 +31,8 @@
 
 - (void)setup {
     _numberField = [[UITextField new]autorelease];
-    _numberField.keyboardType = UIKeyboardTypePhonePad;
     _flagImageView = [[UIImageView new]autorelease];
+    _numberField.keyboardType = UIKeyboardTypePhonePad;
     
     [self makeConstraints];
     [self addSubview:_numberField];
@@ -56,16 +56,12 @@
     [self makeConstraints];
 }
 
-- (void)showFlagImage:(UIImage *)image {
-    CGFloat offset = 5.0f;
+- (void)setFlagImage:(UIImage *)image {
+    CGFloat offset = image == nil ? 0.0f : 5.0f;
+    CGFloat width = image == nil ? 0.0f : self.bounds.size.width * 0.2f;
 
-    _flagImageView.frame = CGRectMake(offset, 0, self.bounds.size.width * 0.2f, self.bounds.size.height);
+    _flagImageView.frame = CGRectMake(offset, 0, width, self.bounds.size.height);
     [_flagImageView setImage:image];
-}
-
-- (void)hideFlagImage {
-    _flagImageView.frame = CGRectMake(0, 0, 0, self.bounds.size.height);
-    [_flagImageView setImage:nil];
 }
 
 @end

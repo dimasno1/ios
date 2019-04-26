@@ -11,7 +11,7 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = [[NumberInputViewController new]autorelease];
     [self.window makeKeyAndVisible];
-    
+
     return YES;
 }
 
